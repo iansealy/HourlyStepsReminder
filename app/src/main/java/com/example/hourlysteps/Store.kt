@@ -43,9 +43,7 @@ class Store(context: Context) {
         set(v) = prefs.edit().putLong("lastBoot", v).apply()
     private fun hourKey(time: Long): String = Instant.ofEpochMilli(time).atZone(ZoneId.systemDefault())
         .format(hourFormatter)
-    fun currentKey(): String = hourKey(System.currentTimeMillis())
     private fun records(): JSONObject = try { JSONObject(prefs.getString(HOURS_KEY, "{}") ?: "{}") } catch (_: Exception) { JSONObject() }
-    fun count(key: String): Int = records().optInt(key, 0)
 
     fun progress(now: ZonedDateTime): Progress {
         val data = records()

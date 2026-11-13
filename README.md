@@ -8,7 +8,7 @@ A native, offline Android app for Samsung Galaxy Z Fold4 (Android 10+). Uses **t
 
 ## Defaults
 - 250 steps per clock hour
-- Reminder at :45 (15 minutes before hour end), **only if below target**
+- Reminder at :45 (15 minutes before the hour ends) if both the hourly target and the daily goal are still unmet
 - 12 successful hours per calendar day, counted across all 24 hours
 - Notifications only for hours starting 08:00 through 21:00 (08:00–22:00)
 - Today + previous 14 calendar days of successful-hour totals

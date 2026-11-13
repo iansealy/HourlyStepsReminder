@@ -11,14 +11,20 @@ class ReminderReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent?) {
         val store = Store(context)
         val now = ZonedDateTime.now()
-        if (store.inNotificationHours(now.hour) && store.count(store.currentKey()) < store.hourlyTarget) {
+        val progress = store.progress(now)
+        val todayCount = progress.successfulHours[now.toLocalDate().toString()] ?: 0
+        val hourlyTarget = store.hourlyTarget
+        if (store.inNotificationHours(now.hour) &&
+            progress.currentHourSteps < hourlyTarget &&
+            todayCount < store.dailyTarget
+        ) {
             val nm = context.getSystemService(NotificationManager::class.java)
             nm.createNotificationChannel(NotificationChannel("reminders", "Hourly reminders", NotificationManager.IMPORTANCE_HIGH))
             if (Build.VERSION.SDK_INT < 33 || context.checkSelfPermission(Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
                 val open = PendingIntent.getActivity(context, 1, Intent(context, MainActivity::class.java), PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
                 nm.notify(2, Notification.Builder(context, "reminders").setSmallIcon(android.R.drawable.ic_dialog_info)
                     .setContentTitle("Time for some steps")
-                    .setContentText("${store.count(store.currentKey())} of ${store.hourlyTarget} steps this hour. ${store.reminderMinutes} minutes left.")
+                    .setContentText("${progress.currentHourSteps} of $hourlyTarget steps this hour. ${store.reminderMinutes} minutes left.")
                     .setContentIntent(open).setAutoCancel(true).build())
             }
         }
