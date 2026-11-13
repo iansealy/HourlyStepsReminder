@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Hourly Steps Reminder</string>
+    <string name="dashboard_title">Hourly Steps</string>
+    <string name="settings_title">Settings</string>
+    <string name="back">Back</string>
+    <string name="current_hour">Current hour</string>
+    <string name="hour_range">%1$s–%2$s</string>
+    <string name="step_target">of %1$s steps</string>
+    <plurals name="steps_left">
+        <item quantity="one">%1$s step to go</item>
+        <item quantity="other">%1$s steps to go</item>
+    </plurals>
+    <string name="hourly_goal_reached">Hourly goal reached</string>
+    <string name="today">Today</string>
+    <string name="today_progress">%1$s / %2$s hours</string>
+    <string name="today_summary">Hours with at least %1$s steps</string>
+    <string name="daily_goal_reached">Daily goal reached</string>
+    <string name="history_title">History</string>
+    <string name="history_summary">Today and the previous 14 days</string>
+    <string name="history_today">Today · %1$s</string>
+    <plurals name="history_hours">
+        <item quantity="one">%1$s hr</item>
+        <item quantity="other">%1$s hrs</item>
+    </plurals>
+    <string name="history_goal_met">Goal met</string>
+    <string name="sensor_unavailable">This device has no step counter available.</string>
+    <string name="activity_permission_needed">Allow Physical activity to count steps.</string>
+    <string name="allow_activity">Allow activity</string>
+    <string name="monitoring_failed">Unable to start step monitoring.</string>
+
+    <string name="goals_section">Goals</string>
+    <string name="hourly_goal_setting">Steps per hour</string>
+    <string name="daily_goal_setting">Successful hours per day</string>
+    <string name="reminders_section">Reminders</string>
+    <string name="reminders_summary">The notification window applies to reminders. Steps count towards your goal at any hour.</string>
+    <string name="reminder_lead_setting">Minutes before the hour ends</string>
+    <string name="reminder_start_setting">Notifications start</string>
+    <string name="reminder_end_setting">Notifications end</string>
+    <string name="reminder_window_hint">The end time is exclusive. Matching start and end times enable reminders all day.</string>
+    <string name="whole_hour">%1$02d:00</string>
+    <string name="precise_reminders">Precise reminders</string>
+    <string name="precise_allowed">Allowed</string>
+    <string name="precise_delayed">Allow precise reminders to reduce delays</string>
+    <string name="precise_unavailable">Open Android settings to manage precise reminders.</string>
+    <string name="tracking_note">Step counts may be incomplete after a sensor gap or a restart.</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="allowed_range">Enter a whole number from %1$d to %2$d.</string>
+    <string name="hour_number_hint">Enter a whole hour from %1$d to %2$d.</string>
+    <string name="edit_setting_description">%1$s, %2$s</string>
+</resources>

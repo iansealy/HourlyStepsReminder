@@ -1,0 +1,23 @@
+# Gradle and Kotlin caches and build outputs
+.gradle/
+.kotlin/
+build/
+
+# Android Studio project state
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Local SDK configuration and signing files
+local.properties
+*.jks
+*.keystore
+
+# Generated Android packages
+*.apk
+*.aab
+
+# macOS Finder metadata
+.DS_Store
