@@ -2,6 +2,10 @@
 
 A native, offline Android app for Samsung Galaxy Z Fold4 (Android 10+). Uses **the phone's own `TYPE_STEP_COUNTER` sensor**, not Samsung Health, Google Fit, or the Galaxy Fit3.
 
+## Screenshot
+
+<img src="docs/dashboard.png" width="360" alt="Hourly Steps Reminder dashboard showing 168 of 250 steps this hour, 7 of 12 qualifying hours today, and recent history">
+
 ## Defaults
 - 250 steps per clock hour
 - Reminder at :45 (15 minutes before hour end), **only if below target**
